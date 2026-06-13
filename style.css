@@ -9,7 +9,8 @@
       background: #f1f4f8;
       color: #1e293b;
       line-height: 1.5;
-      padding: 24px 20px;
+      padding: 0;
+      margin: 0;
     }
 
     /* main app grid */
@@ -280,3 +281,159 @@
       85% { opacity: 1; transform: translateY(0); }
       100% { opacity: 0; transform: translateY(20px); }
     }
+    .navbar {
+  background: #0f172a;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo i {
+  color: #3b82f6;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: white;
+}
+
+.theme-toggle {
+  background: #1e293b;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  background: #334155;
+}
+
+/* ========== FOOTER STYLES ========== */
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding: 50px 24px 30px;
+}
+
+.footer-section h3, .footer-section h4 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer-section h3 i {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  color: #cbd5e1;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #3b82f6;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+}
+
+.footer-section ul li i {
+  color: #3b82f6;
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+  font-size: 0.85rem;
+}
+
+/* ========== RESET BUTTON STYLE ========== */
+#resetBtnNav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+#resetBtnNav:hover {
+  background: #1e293b;
+}
