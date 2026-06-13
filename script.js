@@ -260,3 +260,49 @@
   
   // init load & set autosave
   loadFromLocalStorage();
+
+  function resetAllData() {
+  if (confirm("Are you sure you want to reset all data? This will clear your current resume and restore default example data.")) {
+    // Default data
+    resumeData = {
+      personal: { fullName: "Emma Watson", jobTitle: "Senior Product Designer", email: "emma.w@design.io", phone: "+1 415 777 1234", location: "New York, NY" },
+      education: [{ degree: "B.Sc. Computer Science", institution: "Stanford University", year: "2020" }],
+      work: [{ title: "Lead Frontend Developer", company: "TechCorp", startDate: "2021", endDate: "Present", description: "Built design system and PWA" }],
+      skills: "React, TypeScript, Tailwind, UX Research",
+      projects: [{ name: "Offline Resume Builder", description: "Full local storage & PDF generation", link: "" }],
+      activeTemplate: "modern"
+    };
+    
+    renderAllForms();
+    updatePreview();
+    saveToLocalStorage();
+    highlightActiveTemplate();
+    showToast("✓ All data reset to default!");
+  }
+}
+
+// Theme toggle functionality
+let isDarkMode = false;
+
+function toggleTheme() {
+  isDarkMode = !isDarkMode;
+  if (isDarkMode) {
+    document.body.style.background = "#0f172a";
+    document.body.style.color = "#e2e8f0";
+    document.querySelector('.form-panel').style.background = "#1e293b";
+    document.querySelector('.preview-panel').style.background = "#0f172a";
+    document.querySelectorAll('.dynamic-item').forEach(el => el.style.background = "#334155");
+    document.getElementById('themeToggleBtn').innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    document.body.style.background = "#f1f4f8";
+    document.body.style.color = "#1e293b";
+    document.querySelector('.form-panel').style.background = "white";
+    document.querySelector('.preview-panel').style.background = "#e2e8f0";
+    document.querySelectorAll('.dynamic-item').forEach(el => el.style.background = "#f8fafc");
+    document.getElementById('themeToggleBtn').innerHTML = '<i class="fas fa-moon"></i>';
+  }
+}
+
+// Event listeners for new features
+document.getElementById("resetBtnNav").addEventListener('click', resetAllData);
+document.getElementById("themeToggleBtn").addEventListener('click', toggleTheme);
