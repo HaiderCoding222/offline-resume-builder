@@ -1,0 +1,76 @@
+/* CREATIVE / TECH TEMPLATE */
+.template-creative {
+  background: linear-gradient(145deg, #faf5ff 0%, #ffffff 100%);
+  border-left: 8px solid #a855f7;
+  padding: 32px 36px;
+  font-family: 'Inter', sans-serif;
+}
+
+.template-creative h1 { 
+  font-size: 2.2rem; 
+  font-weight: 800; 
+  background: linear-gradient(135deg, #7c3aed, #c084fc); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  color: transparent; 
+  margin-bottom: 6px; 
+}
+
+.template-creative .contact-line { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 16px; 
+  border-bottom: 2px dashed #c084fc; 
+  padding-bottom: 12px; 
+  margin-bottom: 20px; 
+  font-weight: 500; 
+}
+
+.template-creative .section-title-resume { 
+  font-weight: 800; 
+  font-size: 1.1rem; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  margin: 22px 0 12px 0; 
+  color: #6b21a5; 
+}
+
+.template-creative .job-item {
+  margin-bottom: 14px;
+}
+
+.template-creative .job-title { 
+  font-weight: 700; 
+  font-size: 1rem; 
+  color: #6b21a5;
+}
+
+.template-creative .job-dates { 
+  font-size: 0.75rem; 
+  opacity: 0.7; 
+  margin-bottom: 4px; 
+}
+
+.template-creative .edu-item {
+  margin-bottom: 14px;
+}
+
+.template-creative .project-item {
+  margin-bottom: 14px;
+}
+
+.template-creative .skills-list { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+  margin-top: 8px; 
+}
+
+.template-creative .skill-tag { 
+  background: linear-gradient(135deg, #e9d5ff, #f3e8ff); 
+  padding: 5px 12px; 
+  border-radius: 30px; 
+  font-size: 0.75rem; 
+  font-weight: 600; 
+  color: #6b21a5;
+}
