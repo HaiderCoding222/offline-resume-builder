@@ -1,0 +1,124 @@
+/* CLASSIC PROFESSIONAL TEMPLATE - FIXED & Improved */
+.template-classic {
+  display: flex;
+  background: white;
+  font-family: 'Inter', sans-serif;
+  min-height: 1100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  overflow: hidden;
+  position: relative;
+}
+
+/* SIDEBAR */
+.template-classic .sidebar-left {
+  background: #1e3a5f;
+  color: white;
+  width: 33%;
+  padding: 40px 25px;
+  position: relative;
+}
+
+/* RIGHT CONTENT */
+.template-classic .content-right {
+  width: 67%;
+  padding: 40px 35px;
+  position: relative;
+}
+
+/* Draggable for Classic */
+.draggable-classic {
+  position: relative;
+  cursor: move;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+  border: 1px dashed transparent;
+}
+
+.draggable-classic:hover {
+  border-color: #3b82f6;
+  border-radius: 4px;
+}
+
+.draggable-classic:active,
+.draggable-classic.dragging {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* Inline Editing */
+[contenteditable="true"]:focus {
+  outline: 2px solid #3b82f6;
+  background: rgba(255, 230, 100, 0.2);
+  border-radius: 3px;
+}
+
+/* Image Support */
+.image-container {
+  border: 2px dashed #64748b;
+  background: #f1f5f9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-container.circle {
+  border-radius: 50%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Original Styles (kept intact) */
+.template-classic .sidebar-left h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.template-classic .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+}
+
+.template-classic .skill-tag-side {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin: 4px 6px 4px 0;
+  display: inline-block;
+}
+
+.template-classic .content-right h1 {
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 4px;
+}
+
+.template-classic .job-title-main {
+  color: #e94560;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+.template-classic .section-title-right {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1e3a5f;
+  margin: 24px 0 10px 0;
+  border-bottom: 2px solid #1e3a5f;
+  padding-bottom: 5px;
+}

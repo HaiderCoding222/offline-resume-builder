@@ -1,0 +1,116 @@
+/* PROFESSIONAL CORPORATE TEMPLATE - Enhanced with Canva-like interactivity */
+.template-corporate {
+  background: #fef9f0;
+  color: #2c3e2f;
+  padding: 50px 60px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  min-height: 1100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #e5d9b8;
+}
+
+.template-corporate h1 { 
+  font-size: 2.4rem; 
+  font-weight: 700; 
+  color: #1e3a2f; 
+  margin-bottom: 6px; 
+  cursor: text;
+}
+
+.template-corporate .contact-line { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 18px; 
+  background: #e9e2d0; 
+  padding: 12px 18px; 
+  border-radius: 30px; 
+  margin-bottom: 28px; 
+  font-size: 0.85rem; 
+}
+
+.template-corporate .section-title-resume { 
+  background: #d9cdb0; 
+  display: inline-block; 
+  padding: 6px 18px; 
+  border-radius: 30px; 
+  font-weight: 700; 
+  margin: 22px 0 14px 0; 
+  cursor: text;
+}
+
+.template-corporate .job-item,
+.template-corporate .edu-item,
+.template-corporate .project-item {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.template-corporate .job-title { 
+  font-weight: 700; 
+  font-size: 1.05rem; 
+  color: #1e3a2f;
+}
+
+.template-corporate .job-dates { 
+  font-size: 0.8rem; 
+  opacity: 0.75; 
+  margin-bottom: 6px; 
+}
+
+.template-corporate .skills-list { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 10px; 
+}
+
+.template-corporate .skill-tag { 
+  background: #d9cdb0; 
+  padding: 6px 14px; 
+  border-radius: 9999px; 
+  font-size: 0.85rem; 
+  font-weight: 500; 
+  cursor: text;
+}
+
+/* Draggable & Image Styles */
+.draggable {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+  transition: box-shadow 0.2s;
+  z-index: 10;
+}
+
+.draggable:active,
+.draggable.dragging {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  z-index: 50;
+}
+
+.section-block {
+  width: 80%;
+}
+
+.image-container {
+  border: 2px dashed #b8a36b;
+  overflow: hidden;
+  background: #fef9f0;
+}
+
+.image-container.circle {
+  border-radius: 50%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[contenteditable="true"]:focus {
+  outline: 2px solid #1e3a2f;
+  background: #f5e8c7;
+}
