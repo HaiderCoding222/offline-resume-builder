@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Isko replace karein -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> 
+  <title>Offline-First Resume Builder | Premium Templates</title> 
+  <!-- html2pdf.js CDN for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Google Fonts for clean typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="page-builder.css">
+  
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+    <!---- <h3>✍️ Resume Builder</h3> -->
+    </div>
+    
+    <div class="nav-buttons">
+      <button class="theme-toggle" id="themeToggleBtn">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="theme-toggle" id="resetBtnNav"><i class="fas fa-refresh"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="app-container">
+
+    <div class="form-panel">
+
+        <div class="form-content">
+
+            <div class="section-card">
+                <h3>👤 Personal Details</h3>
+
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Job Title">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Phone">
+                <input type="text" placeholder="Address">
+            </div>
+
+            <div class="section-card">
+                <div class="section-title">
+                    <h3>🎓 Education</h3>
+                    <button class="add-btn">+ Add</button>
+                </div>
+
+                <input type="text" placeholder="Degree">
+                <input type="text" placeholder="Institution">
+                <input type="text" placeholder="Year">
+                <input type="text" placeholder="Marks">
+            </div>
+
+            <div class="section-card">
+                <div class="section-title">
+                    <h3>💼 Work Experience</h3>
+                    <button class="add-btn">+ Add</button>
+                </div>
+
+                <input type="text" placeholder="Job Title">
+                <input type="text" placeholder="Company">
+                <input type="text" placeholder="Start - End">
+                <textarea placeholder="Description"></textarea>
+            </div>
+
+            <div class="section-card">
+                <h3>⚙️ Skills</h3>
+
+                <input type="text" placeholder="HTML, CSS, JavaScript, React">
+            </div>
+
+            <div class="section-card">
+                <div class="section-title">
+                    <h3>🚀 Projects</h3>
+                    <button class="add-btn">+ Add</button>
+                </div>
+
+                <input type="text" placeholder="Project Name">
+                <textarea placeholder="Description"></textarea>
+                <input type="url" placeholder="Project Link">
+            </div> 
+
+        </div>
+
+    </div>
+  
+  <div class="preview-panel">
+    
+    <div class="page-tools">
+    <!-- Section Creation Tools -->
+    <div class="tool-group">
+        <button id="createSection" class="add-btn">
+            <i class="fas fa-plus"></i> Create Section
+        </button>
+    </div>
+
+    <!-- Box Controls -->
+    <div class="tool-group">
+        <label for="boxWidth">Width:</label>
+        <input type="number" id="boxWidth" placeholder="Width" style="width: 80px;">
+        
+        <label for="boxHeight">Height:</label>
+        <input type="number" id="boxHeight" placeholder="Height" style="width: 80px;">
+        
+        <label for="boxColor">Color:</label>
+        <input type="color" id="boxColor" style="height: 35px; width: 50px;">
+    </div>
+
+    <!-- Movement Controls -->
+    <div class="tool-group">
+        <button id="moveUp" title="Move Up"><i class="fas fa-arrow-up"></i></button>
+        <button id="moveDown" title="Move Down"><i class="fas fa-arrow-down"></i></button>
+        <button id="moveLeft" title="Move Left"><i class="fas fa-arrow-left"></i></button>
+        <button id="moveRight" title="Move Right"><i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <!-- Text Formatting -->
+    <div class="tool-group">
+        <label for="fontSize">Size:</label>
+        <input type="number" id="fontSize" placeholder="Font Size" style="width: 60px;">
+
+        <label for="fontWeight">Weight:</label>
+        <select id="fontWeight" style="width: 80px;">
+            <option value="300">Light</option>
+            <option value="400" selected>Normal</option>
+            <option value="500">Medium</option>
+            <option value="600">Semi-Bold</option>
+            <option value="700">Bold</option>
+        </select>
+
+        <label for="fontStyle">Style:</label>
+        <select id="fontStyle" style="width: 80px;">
+            <option value="normal">Normal</option>
+            <option value="italic">Italic</option>
+        </select>
+
+        <label for="fontFamily">Font:</label>
+        <select id="fontFamily" style="width: 100px;">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Georgia">Georgia</option>
+            <option value="'Times New Roman'">Times New Roman</option>
+            <option value="'Courier New'">Courier New</option>
+            <option value="Poppins">Poppins</option>
+            <option value="Roboto">Roboto</option>
+        </select>
+    </div>
+
+    <!-- Text Decoration -->
+    <div class="tool-group">
+        <label for="textDecoration">Decoration:</label>
+        <select id="textDecoration" style="width: 100px;">
+            <option value="none">None</option>
+            <option value="underline">Underline</option>
+            <option value="overline">Overline</option>
+            <option value="line-through">Strike</option>
+        </select>
+
+        <label for="textTransform">Transform:</label>
+        <select id="textTransform" style="width: 100px;">
+            <option value="none">Normal</option>
+            <option value="uppercase">UPPERCASE</option>
+            <option value="lowercase">lowercase</option>
+            <option value="capitalize">Capitalize</option>
+        </select>
+
+        <label for="textAlign">Align:</label>
+        <select id="textAlign" style="width: 80px;">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+            <option value="justify">Justify</option>
+        </select>
+
+        <label for="textColor">Color:</label>
+        <input type="color" id="textColor" style="height: 35px; width: 50px;">
+    </div>
+
+    <!-- Spacing Controls -->
+    <div class="tool-group">
+        <label for="letterSpacing">Letter:</label>
+        <select id="letterSpacing" style="width: 80px;">
+            <option value="0px">Normal</option>
+            <option value="1px">1px</option>
+            <option value="2px">2px</option>
+            <option value="3px">3px</option>
+            <option value="4px">4px</option>
+            <option value="5px">5px</option>
+        </select>
+
+        <label for="lineHeight">Line:</label>
+        <select id="lineHeight" style="width: 80px;">
+            <option value="1">1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="1.8">1.8</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+        </select>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="tool-group">
+        <button id="drawLineBtn" class="add-btn" style="background-color: #2ecc71;">
+            <i class="fas fa-minus"></i> Line
+        </button>
+        <button id="addTextBtn" class="add-btn">
+            <i class="fas fa-font"></i> Text
+        </button>
+        <button id="undoBtn" class="add-btn">
+            <i class="fas fa-undo"></i> Undo
+        </button>
+        <button id="redoBtn" class="add-btn">
+            <i class="fas fa-redo"></i> Redo
+        </button>
+    </div>
+
+        <div id="pagesContainer">
+            <div class="a4-preview page"></div>
+        </div>
+
+        <button id="addPageBtn" class="add-page-btn">
+            + Add New Page
+        </button>
+
+   </div>
+
+</div>
+
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3><i class="fas fa-file-alt"></i> ResumeCraft</h3>
+      <p>Build professional resumes instantly. No internet needed. Privacy first.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Templates</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Features</h4>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> 3 Premium Templates</li>
+        <li><i class="fas fa-check-circle"></i> Auto-Save Locally</li>
+        <li><i class="fas fa-check-circle"></i> PDF Export</li>
+        <li><i class="fas fa-check-circle"></i> JSON Backup</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Tech Stack</h4>
+      <ul>
+        <li>HTML5 / CSS3</li>
+        <li>Vanilla JavaScript</li>
+        <li>LocalStorage API</li>
+        <li>html2pdf.js</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 ResumeCraft | Built with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by HaiderCoding222 | Offline-First Resume Builder</p>
+  </div>
+</footer>
+
+<script src="template-modern.js"></script>
+<script src="template-corporate.js"></script>
+<script src="template-creative.js"></script>
+<script src="page-builder.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
