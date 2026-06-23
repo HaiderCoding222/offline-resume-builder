@@ -306,9 +306,7 @@ textarea {
     .preview-panel {
         padding: 30px;
     }
-    .preview-wrapper {
-        min-height: 850px;
-    }
+    
 }
 
 @media (max-width: 768px) {
@@ -324,9 +322,7 @@ textarea {
     .editor-panel {
         padding: 20px 16px;
     }
-    .preview-wrapper {
-        min-height: 600px;
-    }
+    
 }
 
 @media (max-width: 525px) {
@@ -343,7 +339,7 @@ textarea {
         padding: 18px 16px;
     }
     .preview-panel {
-   
+    
     padding: 2px;
     
 }
