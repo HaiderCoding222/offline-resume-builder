@@ -162,13 +162,13 @@
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 480px) {
     .cv-premium-container {
         transform: scale(0.66);
-        max-width: 100%;
+        max-width: 520px;
     }
     .cv-sidebar {
-        padding: 22px 5px;
+        padding: 22px 16px;
     }
     .cv-main-content {
         padding: 28px 20px;
