@@ -1,0 +1,161 @@
+/* Elegant Template - Matching Screenshot */
+.elegant-theme {
+    width: 100% !important;
+    max-width: 794px;
+    margin: 0 auto;
+    background: #ffffff;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #1e293b;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    min-height: 1123px;
+}
+
+.elegant-header {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    padding: 35px 40px 25px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 4px solid #0ea5e9;
+}
+
+.elegant-photo-container {
+    flex-shrink: 0;
+}
+
+.elegant-avatar {
+    width: 138px;
+    height: 138px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 6px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.elegant-name-block h1 {
+    font-size: 36px;
+    margin: 0 0 4px 0;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.elegant-profession {
+    font-size: 18px;
+    color: #475569;
+    margin: 0;
+    font-weight: 500;
+}
+
+.elegant-body {
+    display: flex;
+    padding: 30px 40px;
+    gap: 35px;
+    background: #f8fafc;
+}
+
+.elegant-left-column {
+    width: 38%;
+}
+
+.elegant-right-column {
+    width: 62%;
+}
+
+.elegant-section {
+    margin-bottom: 28px;
+}
+
+.elegant-section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #bae6fd;
+    padding-bottom: 6px;
+}
+
+.elegant-text {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #334155;
+}
+
+.elegant-contact-info .contact-item {
+    font-size: 12.5px;
+    margin-bottom: 6px;
+    color: #475569;
+}
+
+.elegant-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.elegant-skills-list div {
+    font-size: 12.5px;
+    padding-left: 4px;
+    position: relative;
+}
+
+.elegant-skills-list div:before {
+    content: "•";
+    color: #0ea5e9;
+    margin-right: 6px;
+}
+
+/* Timeline for Right Column */
+.elegant-timeline .cv-experience-node {
+    margin-bottom: 22px;
+    position: relative;
+    padding-left: 22px;
+}
+
+.elegant-timeline .cv-experience-node:before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    bottom: -18px;
+    width: 2px;
+    background: #bae6fd;
+}
+
+.elegant-timeline .cv-experience-node:last-child:before {
+    display: none;
+}
+
+.cv-node-bold-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.cv-node-date-sub {
+    font-size: 12px;
+    color: #64748b;
+    margin: 2px 0 6px;
+}
+
+.cv-node-role-italic {
+    font-size: 13px;
+    color: #334155;
+    font-style: italic;
+}
+
+.cv-node-details-para {
+    font-size: 12.2px;
+    line-height: 1.5;
+    color: #475569;
+}
+
+/* Custom sections styling */
+.sidebar-section-elegant {
+    margin-top: 22px;
+}
