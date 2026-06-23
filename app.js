@@ -296,44 +296,58 @@ function renderTemplatesPage() {
 window.addEventListener('DOMContentLoaded', () => {
     loadActiveTemplate();
 });
+// ================== DOWNLOAD PDF - FIXED VERSION ==================
 const btnDownloadPDF = document.getElementById('btn-download-pdf');
 
-btnDownloadPDF.addEventListener('click', () => {
-    const previewElement = document.getElementById('resume-preview-placeholder');
+btnDownloadPDF.addEventListener('click', async () => {
+    const previewPlaceholder = document.getElementById('resume-preview-placeholder');
     
-    if (!previewElement || !previewElement.children.length) {
-        alert("Please load the resume first!");
+    if (!previewPlaceholder || !previewPlaceholder.children.length) {
+        alert("Resume load nahi hua. Pehle Builder mein resume dekho!");
         return;
     }
 
-    // Show loading
-    btnDownloadPDF.innerHTML = '⏳ Generating...';
+    // Direct CV container target karo (blank page avoid karne ke liye)
+    const cvElement = previewPlaceholder.querySelector('.cv-premium-container');
+    
+    if (!cvElement) {
+        alert("CV template load nahi hua. Page refresh karke try karo.");
+        return;
+    }
+
+    btnDownloadPDF.innerHTML = '⏳ Generating PDF...';
     btnDownloadPDF.disabled = true;
 
     const opt = {
-        margin:       [0, 0, 0, 0],
-        filename:     `${state.resumeData.name.replace(/ /g, '_')}_Resume.pdf`,
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { 
+        margin: [5, 5, 5, 5],
+        filename: `${(state.resumeData.name || 'Resume').replace(/ /g, '_')}_CV.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { 
             scale: 2,
             useCORS: true,
-            letterRendering: true 
+            letterRendering: true,
+            scrollX: 0,
+            scrollY: 0,
+            windowWidth: 794
         },
-        jsPDF:        { 
+        jsPDF: { 
             unit: 'mm', 
             format: 'a4', 
-            orientation: 'portrait' 
+            orientation: 'portrait',
+            compress: true
+        },
+        pagebreak: { 
+            mode: ['avoid-all', 'css', 'legacy'] 
         }
     };
 
-    html2pdf().set(opt).from(previewElement).save().then(() => {
-        // Reset button
-        btnDownloadPDF.innerHTML = '📥 Download PDF';
-        btnDownloadPDF.disabled = false;
-    }).catch(err => {
+    try {
+        await html2pdf().set(opt).from(cvElement).save();
+    } catch (err) {
         console.error(err);
-        alert("Error generating PDF. Please try again.");
+        alert("PDF generate karne mein error aaya. Dobara try karo.");
+    } finally {
         btnDownloadPDF.innerHTML = '📥 Download PDF';
         btnDownloadPDF.disabled = false;
-    });
+    }
 });
