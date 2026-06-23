@@ -329,7 +329,7 @@ textarea {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 525px) {
     .templates-grid {
         grid-template-columns: 1fr;
     }
@@ -342,4 +342,9 @@ textarea {
     .form-section {
         padding: 18px 16px;
     }
+    .preview-panel {
+   
+    padding: 2px;
+    
+}
 }
