@@ -49,6 +49,7 @@ const state = {
 
 const btnBuilder = document.getElementById('btn-builder');
 const btnTemplates = document.getElementById('btn-templates');
+const btnDownload = document.getElementById('btn-download');
 const viewBuilder = document.getElementById('view-builder');
 const viewTemplates = document.getElementById('view-templates');
 const templatesList = document.getElementById('templates-list');
@@ -56,6 +57,7 @@ const resumeForm = document.getElementById('resume-form');
 
 btnBuilder.addEventListener('click', () => switchView('builder'));
 btnTemplates.addEventListener('click', () => switchView('templates'));
+btnDownload.addEventListener('click', () => window.print());
 
 function switchView(view) {
     if (view === 'builder') {
@@ -269,26 +271,22 @@ function updatePreviewRender() {
 
 function renderTemplatesPage() {
     templatesList.innerHTML = "";
-
     AVAILABLE_TEMPLATES.forEach(tmpl => {
         const card = document.createElement('div');
         card.className = "template-card";
-
         card.innerHTML = `
             <div class="template-preview">
                 <img src="${tmpl.thumbnail}" alt="${tmpl.name}" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
             </div>
-            <div class="template-info">
-                <h3>${tmpl.name}</h3>
-                <small>Professional • Clean Layout</small>
+            <div class="template-info" style="padding: 12px;">
+                <h3 style="font-size: 16px;">${tmpl.name}</h3>
+                <small style="color: #64748b;">Professional • Clean Layout</small>
             </div>
         `;
-
         card.addEventListener('click', () => {
             state.currentTemplate = tmpl.id;
             switchView('builder');
         });
-
         templatesList.appendChild(card);
     });
 }
