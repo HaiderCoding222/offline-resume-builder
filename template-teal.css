@@ -1,0 +1,225 @@
+.cv-teal-container {
+    width: 1100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Resume */
+.resume {
+    display: flex;
+    position: relative;
+    min-height: 1123px;
+    width: 1100px;
+}
+
+/* Top Right Triangle */
+.resume::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 180px solid #3d5c78;
+    border-left: 180px solid transparent;
+    z-index: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 340px;
+    background: #3d5c78;
+    color: white;
+    padding: 40px 25px;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 8px solid #a3c4d9;
+    overflow: hidden;
+    margin: 0 auto 25px;
+    box-shadow: 0 0 0 6px rgba(255,255,255,0.15);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.title {
+    text-align: center;
+    background: #2c4a66;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 auto 30px;
+}
+
+/* Angled White Tabs */
+.tab {
+    background: white;
+    color: #3d5c78;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    margin: 35px 0 15px -25px;
+    width: calc(100% + 50px);
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+
+/* Contact */
+.contact-info p {
+    margin: 10px 0;
+    font-size: 0.97rem;
+}
+
+.contact-info i {
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* Skills */
+.skills {
+    margin-top: 10px;
+}
+
+.skill-item {
+    margin: 14px 0;
+}
+
+.skill-name {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.skill-bar {
+    height: 7px;
+    background: #2c4a66;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #a3c4d9, #c5d9e8);
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 45px 50px 40px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 3.1rem;
+    color: #3d5c78;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    background: #3d5c78;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+    margin: 30px 0 18px -20px;
+    width: calc(100% + 40px);
+}
+
+.about p {
+    line-height: 1.75;
+    color: #333;
+    font-size: 1.02rem;
+}
+
+.job-title {
+    color: #3d5c78;
+    font-weight: 700;
+}
+
+.company {
+    color: #4a7aa3;
+    font-weight: 500;
+}
+
+ul {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+li {
+    margin: 6px 0;
+    line-height: 1.65;
+}
+
+/* ================== MOBILE PREVIEW + PDF FIXES ================== */
+
+.preview-panel {
+    overflow-x: auto;
+    padding: 20px 10px;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1100px) {
+    .cv-teal-container {
+        transform: scale(0.72);
+        transform-origin: top center;
+    }
+}
+
+@media (max-width: 768px) {
+    .preview-panel {
+        padding: 15px 8px;
+    }
+    .cv-teal-container {
+        transform: scale(0.65);
+    }
+}
+
+/* PDF Optimization */
+@media print {
+    .cv-teal-container {
+        transform: none !important;
+        width: 1100px !important;
+        box-shadow: none;
+    }
+    .resume::before {
+        border-top: 160px solid #3d5c78;
+        border-left: 160px solid transparent;
+    }
+}
+
+.cv-teal-container,
+.resume,
+.sidebar,
+.content {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+}
