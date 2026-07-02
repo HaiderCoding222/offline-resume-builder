@@ -1,0 +1,626 @@
+/* ================== TEAL EXECUTIVE TEMPLATE ================== */
+.cv-teal-container {
+    width: 100% !important;
+    margin: 0 auto;
+    background: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+/* ✅ FIXED: Always side-by-side on ALL devices */
+.resume {
+    display: flex !important;
+    flex-direction: row !important;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 800px;
+}
+
+/* Top Right Triangle - Works everywhere */
+.resume::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 180px solid #3d5c78;
+    border-left: 180px solid transparent;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Sidebar - Fixed proportional width */
+.sidebar {
+    width: 30% !important;
+    min-width: 240px;
+    background: #3d5c78;
+    color: white;
+    padding: 40px 15px;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid #a3c4d9;
+    overflow: hidden;
+    margin: 0 auto 25px;
+    box-shadow: 0 0 0 6px rgba(255,255,255,0.15);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c4a66;
+    color: #a3c4d9;
+    font-size: 14px;
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.title {
+    text-align: center;
+    background: #2c4a66;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 auto 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ✅ FIXED: V-shaped tabs using pseudo-elements */
+.tab {
+    background: white;
+    color: #3d5c78;
+    padding: 10px 15px 10px 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    margin: 35px 0 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.tab::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 20px solid white;
+}
+
+.section-header {
+    background: #3d5c78;
+    color: white;
+    padding: 10px 15px 10px 25px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    position: relative;
+    margin: 30px 0 18px 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 20px solid #3d5c78;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 0.97rem;
+    word-wrap: break-word;
+}
+
+/* Skills */
+.skill-item {
+    margin: 14px 0;
+}
+
+.skill-name {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.skill-bar {
+    height: 7px;
+    background: #2c4a66;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #a3c4d9, #c5d9e8);
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 45px 40px 40px 40px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-size: 3.1rem;
+    color: #3d5c78;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.about p {
+    line-height: 1.75;
+    color: #333;
+    font-size: 1.02rem;
+}
+
+.job-title {
+    color: #3d5c78;
+    font-weight: 700;
+}
+
+.company {
+    color: #4a7aa3;
+    font-weight: 500;
+}
+
+.experience-item ul {
+    margin-top: 8px;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.experience-item li {
+    margin: 6px 0;
+    line-height: 1.65;
+    list-style-type: disc;
+}
+
+.education-item {
+    margin-bottom: 16px;
+}
+
+.education-item strong {
+    color: #3d5c78;
+    font-weight: 700;
+}
+
+/* ================== MOBILE: SIDE-BY-SIDE WITH SCALING ================== */
+@media (max-width: 768px) {
+    .resume {
+        flex-direction: row !important;
+        max-width: 100%;
+        min-height: 600px;
+    }
+
+    .sidebar {
+        width: 35% !important;
+        min-width: 140px !important;
+        padding: 15px 10px;
+        flex-shrink: 0;
+    }
+
+    .photo {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+        margin: 0 auto 15px;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .tab {
+        font-size: 0.75rem;
+        padding: 6px 10px 6px 15px;
+        margin: 15px 0 8px 0;
+    }
+
+    .tab::after {
+        right: -14px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 14px solid white;
+    }
+
+    .section-header {
+        font-size: 0.8rem;
+        padding: 6px 10px 6px 15px;
+        margin: 15px 0 10px 0;
+    }
+
+    .section-header::after {
+        right: -14px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 14px solid #3d5c78;
+    }
+
+    .contact-info p {
+        font-size: 0.65rem;
+        margin: 5px 0;
+    }
+
+    .content {
+        padding: 15px 12px;
+        flex: 1;
+        width: auto;
+    }
+
+    .header h1 {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+
+    .about p {
+        font-size: 0.75rem;
+        line-height: 1.5;
+    }
+
+    .experience-item {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .education-item {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .skill-item {
+        margin: 8px 0;
+    }
+
+    .skill-name {
+        font-size: 0.7rem;
+    }
+
+    .skill-bar {
+        height: 5px;
+    }
+
+    .resume::before {
+        border-top: 80px solid #3d5c78;
+        border-left: 80px solid transparent;
+    }
+}
+
+/* ================== EXTRA SMALL DEVICES ================== */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 30% !important;
+        min-width: 100px !important;
+        padding: 10px 6px;
+    }
+
+    .photo {
+        width: 55px;
+        height: 55px;
+        border-width: 3px;
+        margin: 0 auto 10px;
+    }
+
+    .name {
+        font-size: 0.75rem;
+    }
+
+    .title {
+        font-size: 0.55rem;
+        padding: 3px 6px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .tab {
+        font-size: 0.6rem;
+        padding: 4px 6px 4px 10px;
+        margin: 10px 0 5px 0;
+    }
+
+    .tab::after {
+        right: -10px;
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 10px solid white;
+    }
+
+    .section-header {
+        font-size: 0.65rem;
+        padding: 4px 6px 4px 10px;
+        margin: 10px 0 6px 0;
+    }
+
+    .section-header::after {
+        right: -10px;
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 10px solid #3d5c78;
+    }
+
+    .contact-info p {
+        font-size: 0.5rem;
+        margin: 3px 0;
+    }
+
+    .content {
+        padding: 10px 8px;
+    }
+
+    .header h1 {
+        font-size: 1rem;
+    }
+
+    .about p {
+        font-size: 0.6rem;
+    }
+
+    .experience-item {
+        font-size: 0.55rem;
+        margin-bottom: 6px;
+    }
+
+    .education-item {
+        font-size: 0.55rem;
+        margin-bottom: 6px;
+    }
+
+    .skill-name {
+        font-size: 0.55rem;
+    }
+
+    .skill-bar {
+        height: 4px;
+    }
+
+    .resume::before {
+        border-top: 50px solid #3d5c78;
+        border-left: 50px solid transparent;
+    }
+
+    .experience-item ul {
+        margin-left: 10px;
+    }
+
+    .experience-item li {
+        font-size: 0.55rem;
+    }
+}
+
+/* ================== ✅ PDF PRINT FIXES - COMPLETE ================== */
+@media print {
+    /* ✅ Force full width for PDF */
+    .cv-teal-container {
+        width: 1100px !important;
+        max-width: 1100px !important;
+        min-width: 1100px !important;
+        box-shadow: none !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        height: auto !important;
+    }
+
+    /* ✅ Force row layout */
+    .resume {
+        display: flex !important;
+        flex-direction: row !important;
+        max-width: 1100px !important;
+        min-width: 1100px !important;
+        width: 1100px !important;
+        min-height: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+        page-break-after: avoid !important;
+    }
+
+    /* ✅ Triangle */
+    .resume::before {
+        border-top: 160px solid #3d5c78 !important;
+        border-left: 160px solid transparent !important;
+        display: block !important;
+    }
+
+    /* ✅ Sidebar fixed width */
+    .sidebar {
+        width: 320px !important;
+        min-width: 320px !important;
+        max-width: 320px !important;
+        flex-shrink: 0 !important;
+        padding: 40px 20px !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* ✅ Content fills rest */
+    .content {
+        padding: 40px 35px 35px 35px !important;
+        flex: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* ✅ V-shapes for PDF */
+    .tab {
+        padding: 10px 15px 10px 25px !important;
+        margin: 30px 0 15px 0 !important;
+        background: white !important;
+        color: #3d5c78 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .tab::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        right: -20px !important;
+        width: 0 !important;
+        height: 0 !important;
+        border-top: 22px solid transparent !important;
+        border-bottom: 22px solid transparent !important;
+        border-left: 20px solid white !important;
+        display: block !important;
+    }
+
+    .section-header {
+        padding: 10px 15px 10px 25px !important;
+        margin: 25px 0 15px 0 !important;
+        background: #3d5c78 !important;
+        color: white !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .section-header::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        right: -20px !important;
+        width: 0 !important;
+        height: 0 !important;
+        border-top: 22px solid transparent !important;
+        border-bottom: 22px solid transparent !important;
+        border-left: 20px solid #3d5c78 !important;
+        display: block !important;
+    }
+
+    /* ✅ PREVENT CUTOFF - Important! */
+    .cv-teal-container,
+    .resume,
+    .sidebar,
+    .content,
+    .section-header,
+    .skill-item,
+    .experience-item,
+    .education-item,
+    .tab,
+    .about,
+    .contact-info {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+    }
+
+    /* ✅ Experience items ko ek saath rakhna */
+    .experience-item {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* ✅ Education items ko ek saath rakhna */
+    .education-item {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* ✅ Photo */
+    .photo {
+        width: 130px !important;
+        height: 130px !important;
+        border-width: 6px !important;
+    }
+
+    .name {
+        font-size: 1.5rem !important;
+    }
+
+    .title {
+        font-size: 1rem !important;
+    }
+}
+
+/* Preview Overrides */
+.preview-panel {
+    overflow-x: auto !important;
+    padding: 20px 15px;
+    background: #f1f5f9;
+}
+
+.photo img[src=""], .photo img:not([src]) { display: none; }
+
+.photo .placeholder-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #a3c4d9;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+}
+
+#teal-custom-sections .section-header {
+    margin-top: 25px;
+}
+
+#teal-custom-sections .about p {
+    white-space: pre-line;
+    margin-top: 8px;
+}
+
+.experience-item ul {
+    list-style-type: none !important;
+    margin-left: 0 !important;
+    padding-left: 5px !important;
+}
+
+.experience-item li {
+    list-style-type: none !important;
+    line-height: 1.65;
+    margin: 6px 0;
+}
