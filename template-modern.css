@@ -1,0 +1,162 @@
+/* Split Layout Viewport */
+.cv-modern-split-container {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 0;
+    height: calc(100vh - 70px);
+    background: #f1f5f9;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Scrollable Left Editor */
+.modern-editor {
+    background: #ffffff;
+    border-right: 1px solid #cbd5e1;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.form-group-modern {
+    margin-bottom: 12px;
+}
+
+.form-group-modern label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #475569;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.form-group-modern input, 
+.form-group-modern textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #0f172a;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-group-modern input:focus, 
+.form-group-modern textarea:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+/* Right Preview Canvas Wrapper */
+.modern-preview {
+    background: #cbd5e1;
+    overflow-y: auto;
+    height: 100%;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Standard A4 Paper Style (100% Matching Professional Spacing) */
+.cv-ats-theme {
+    display: block;
+    min-height: 297mm;
+    width: 100%;
+    max-width: 794px;
+    background: #ffffff;
+    font-family: 'Times New Roman', Times, serif; /* Pure Professional Font */
+    color: #000000;
+    padding: 40px 50px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.ats-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.ats-header h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.ats-contact-row {
+    font-size: 11px;
+    color: #000000;
+    word-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* ATS Standard Sections */
+.ats-section {
+    margin-bottom: 12px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.ats-section-heading {
+    font-size: 11.5px;
+    font-weight: bold;
+    letter-spacing: 0.75px;
+    margin-bottom: 2px;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+.ats-hr {
+    border: none;
+    border-top: 1px solid #000000;
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+
+/* Flex Row for Split Data */
+.ats-row-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 11px;
+    margin-bottom: 1px;
+}
+
+.ats-bold {
+    font-weight: bold;
+}
+
+.ats-italic {
+    font-style: italic;
+}
+
+.ats-details-box {
+    font-size: 11px;
+    line-height: 1.35;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
+
+.ats-details-box div {
+    margin-bottom: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .cv-modern-split-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+    }
+    .modern-editor, .modern-preview {
+        height: 600px;
+    }
+}

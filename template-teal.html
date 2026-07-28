@@ -1,0 +1,74 @@
+<div class="cv-teal-container">
+    
+    <!-- Left Editor Panel (Scrollable, Fixed Width) -->
+    <div class="teal-editor">
+        <h2>Teal Template Editor</h2>
+        <form id="teal-form" onsubmit="event.preventDefault();">
+            
+            <h3 style="font-size:13px; color:#3d5c78; border-left:3px solid #3d5c78; padding-left:6px; margin:15px 0 10px 0;">Profile Picture</h3>
+            <div class="teal-editor-group">
+                <label>Upload Image</label>
+                <input type="file" id="teal-input-file" accept="image/*" style="padding: 6px;">
+            </div>
+
+            <h3 style="font-size:13px; color:#3d5c78; border-left:3px solid #3d5c78; padding-left:6px; margin:15px 0 10px 0;">Contact Details</h3>
+            <div class="teal-editor-group">
+                <label>Full Name</label>
+                <input type="text" id="teal-input-name" value="Henrietta Mitchell">
+            </div>
+            <div class="teal-editor-group">
+                <label>Profession</label>
+                <input type="text" id="teal-input-title" value="GRAPHIC DESIGNER">
+            </div>
+            <div class="teal-editor-group">
+                <label>Phone Number</label>
+                <input type="text" id="teal-input-phone" value="+123-456-7890">
+            </div>
+            <div class="teal-editor-group">
+                <label>Email Address</label>
+                <input type="email" id="teal-input-email" value="hello@reallygreatsite.com">
+            </div>
+            <div class="teal-editor-group">
+                <label>Website Link</label>
+                <input type="text" id="teal-input-website" value="www.reallygreatsite.com">
+            </div>
+            <div class="teal-editor-group">
+                <label>Location / Address</label>
+                <input type="text" id="teal-input-address" value="123 Anywhere St., Any City, ST 12345">
+            </div>
+
+            <!-- All Dynamic Sections Load here dynamically -->
+            <div id="teal-dynamic-editor-sections"></div>
+        </form>
+    </div>
+
+    <!-- Right Page Print Canvas Preview Area -->
+    <div class="teal-preview">
+        <div class="cv-teal-content">
+            <aside class="teal-sidebar" id="teal-sidebar-target">
+                <div class="teal-photo-wrapper">
+                    <div class="teal-photo">
+                        <img src="" id="teal-p-img" alt="Profile" style="display:none;">
+                        <div id="teal-p-placeholder" style="display:flex; height:100%; align-items:center; justify-content:center; color:#a3c4d9; font-size:12px;">📷 Image Frame</div>
+                    </div>
+                </div>
+                <!-- Contact info is static element of sidebar header but rendering dynamic inputs -->
+                <div class="teal-side-tab">Contact</div>
+                <div class="teal-contact-info" id="teal-contact-target"></div>
+
+                <!-- Dynamic sidebar segments load here -->
+                <div id="teal-sidebar-sections-container"></div>
+            </aside>
+
+            <main class="teal-main-content">
+                <div class="teal-name-header">
+                    <h1 id="teal-p-name">Henrietta Mitchell</h1>
+                    <div class="teal-job-pill" id="teal-p-title">GRAPHIC DESIGNER</div>
+                </div>
+
+                <!-- Dynamic main sections layout elements load here -->
+                <div id="teal-main-sections-container"></div>
+            </main>
+        </div>
+    </div>
+</div>

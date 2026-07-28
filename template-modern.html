@@ -1,0 +1,52 @@
+<div class="cv-modern-split-container">
+
+    <!-- Left Editor Panel (Scrollable) -->
+    <div class="modern-editor">
+        <h2 style="margin-top: 0; color:#000000; font-family: 'Times New Roman', Times, serif; font-size: 20px; border-bottom: 2px solid #000; padding-bottom: 5px; text-transform: uppercase;">
+            Modern Resume Editor
+        </h2>
+        <form id="modern-form" onsubmit="event.preventDefault();">
+            
+            <!-- Basic Details -->
+            <div class="form-group-modern">
+                <label>Full Name</label>
+                <input type="text" id="mod-input-name">
+            </div>
+            <div class="form-group-modern">
+                <label>Email Address</label>
+                <input type="email" id="mod-input-email">
+            </div>
+            <div class="form-group-modern">
+                <label>Mobile Number</label>
+                <input type="text" id="mod-input-phone">
+            </div>
+            <div class="form-group-modern">
+                <label>Linkedin Profile</label>
+                <input type="text" id="mod-input-linkedin">
+            </div>
+            
+            <!-- Dynamic Sections (Education, Experience, Skills, Custom) -->
+            <div id="modern-dynamic-editor-sections"></div>
+        </form>
+    </div>
+
+    <!-- Right Live Preview Panel (Standard ATS Single Column Paper View) -->
+    <div class="modern-preview">
+        <div class="cv-ats-theme" id="modern-ats-paper">
+            
+            <!-- Header Section -->
+            <div class="ats-header">
+                <h1 id="p-mod-name">Rosen Georgiev</h1>
+                <div class="ats-contact-row">
+                    <span id="p-mod-email">Email: name@gmail.com</span> | 
+                    <span id="p-mod-phone">Mobile: +999999999</span> | 
+                    <span id="p-mod-linkedin">Linkedin: Rosen Georgiev</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Subsections Render Area -->
+            <div id="modern-main-preview"></div>
+            
+        </div>
+    </div>
+</div>

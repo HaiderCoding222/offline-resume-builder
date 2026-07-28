@@ -1,0 +1,49 @@
+<div class="cv-blue-container">
+
+    <!-- Left Editor Panel (Scrollable, Fixed Width) -->
+    <div class="blue-editor">
+        <h2 style="margin-top: 0; color:#1e3a8a;">Resume Details</h2>
+        <form id="blue-form" onsubmit="event.preventDefault();">
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Full Name</label>
+                <input type="text" id="blue-name" value="Anar Abbas" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Job Title</label>
+                <input type="text" id="blue-title" value="Frontend Web Developer & UI Designer" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Email</label>
+                <input type="email" id="blue-email" value="nimramumtaaz16@gmail.com" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Phone</label>
+                <input type="text" id="blue-phone" value="+92 300 1234567" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            
+            <div id="dynamic-editor-sections"></div>
+        </form>
+    </div>
+
+    <!-- Right Preview Panel (Scrollable canvas viewport wrapper) -->
+    <div class="blue-preview">
+        <div class="cv-blue-content">
+            <header class="cv-blue-header">
+                <div class="header-left">
+                    <h1 id="p-blue-name">Anar Abbas</h1>
+                    <p id="p-blue-title" style="letter-spacing: 1px; font-size:14px; margin:4px 0 0 0; opacity:0.9;">FRONTEND WEB DEVELOPER & UI DESIGNER</p>
+                </div>
+                <div class="header-right" style="text-align: right; font-size: 13px; line-height: 1.4;">
+                    <p style="margin:2px 0;"><span class="icon">📩</span> <span id="p-blue-email">nimramumtaaz16@gmail.com</span></p>
+                    <p style="margin:2px 0;"><span class="icon">📱</span> <span id="p-blue-phone">+92 300 1234567</span></p>
+                    <p style="margin:2px 0;"><span class="icon">📍</span> Sargodha, Pakistan</p>
+                </div>
+            </header>
+
+            <div class="cv-blue-body">
+                <main class="main-content" id="blue-main-preview"></main>
+                <aside class="sidebar" id="blue-sidebar-preview"></aside>
+            </div>
+        </div>
+    </div>
+</div>

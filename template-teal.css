@@ -1,0 +1,291 @@
+/* ================== TEAL TEMPLATE SPLIT SYSTEM ================== */
+
+.cv-teal-container {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background: #f1f5f9;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.teal-editor {
+    width: 420px;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-right: 1px solid #cbd5e1;
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.teal-editor h2 {
+    margin-top: 0;
+    color: #3d5c78;
+    font-size: 18px;
+    border-bottom: 2px solid #3d5c78;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.teal-editor-group {
+    margin-bottom: 12px;
+}
+
+.teal-editor-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #475569;
+    text-transform: uppercase;
+}
+
+.teal-editor-group input,
+.teal-editor-group textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 13px;
+    background-color: #f8fafc;
+}
+
+.teal-editor-group input:focus,
+.teal-editor-group textarea:focus {
+    border-color: #3d5c78;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.teal-preview {
+    flex: 1;
+    padding: 30px;
+    background: #e2e8f0;
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+/* Custom Scrollbars */
+.teal-editor::-webkit-scrollbar,
+.teal-preview::-webkit-scrollbar {
+    width: 8px;
+}
+.teal-editor::-webkit-scrollbar-thumb,
+.teal-preview::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+/* Strict A4 Canvas Structure */
+.cv-teal-content {
+    width: 794px !important;
+    min-height: 1123px !important;
+    max-height: 1123px !important;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.cv-teal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 140px solid #3d5c78;
+    border-left: 140px solid transparent;
+    z-index: 1;
+}
+
+/* Sidebar Section Components */
+.teal-sidebar {
+    width: 275px !important;
+    background: #3d5c78;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* Perfect Circle Structure */
+.teal-photo-wrapper {
+    position: relative;
+    margin: 0 auto 25px;
+    width: 155px;
+    height: 155px;
+}
+
+.teal-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50% !important;
+    border: 3px solid #ffffff;
+    outline: 2px solid #a3c4d9;
+    outline-offset: 4px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #2c4a66;
+}
+
+.teal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.teal-side-tab {
+    background: #ffffff;
+    color: #3d5c78;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 13px;
+    margin: 25px 0 15px 0;
+    letter-spacing: 1.5px;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
+    text-transform: uppercase;
+}
+
+.teal-contact-info p {
+    font-size: 12px;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #f1f5f9;
+}
+
+.teal-skill-item {
+    margin: 14px 0;
+}
+.teal-skill-label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.teal-skill-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.teal-skill-progress {
+    height: 100%;
+    background: #a3c4d9;
+}
+
+/* Main Panels Elements */
+.teal-main-content {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.teal-name-header h1 {
+    font-size: 40px;
+    color: #3d5c78;
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.teal-job-pill {
+    background: #3d5c78;
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.teal-main-header {
+    background: #3d5c78;
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 22px 0 14px 0;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
+    width: fit-content;
+    min-width: 180px;
+}
+
+.teal-about p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0;
+}
+
+.teal-edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.teal-edu-item {
+    font-size: 13px;
+    color: #334155;
+}
+.teal-edu-date {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.teal-exp-timeline {
+    position: relative;
+    padding-left: 15px;
+    border-left: 2px solid #a3c4d9;
+}
+.teal-exp-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+.teal-exp-item::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3d5c78;
+}
+.teal-exp-role {
+    font-weight: 700;
+    font-size: 14px;
+    color: #3d5c78;
+}
+.teal-exp-meta {
+    font-size: 12px;
+    color: #4a7aa3;
+    font-weight: 600;
+    margin: 2px 0 6px 0;
+}
+.teal-exp-details {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 12.5px;
+    color: #475569;
+    line-height: 1.5;
+}

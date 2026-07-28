@@ -1,0 +1,74 @@
+<!-- Main Container for Side-by-Side Editor & Live Preview -->
+<div class="corporate-editor-wrapper">
+    
+    <!-- LEFT SIDE: Interactive Editor Panel -->
+    <div class="corporate-editor-panel">
+        <h3 class="editor-header">Resume Customizer</h3>
+        
+        <!-- Name, Role and Profile Image File Input -->
+        <div class="editor-group-card">
+            <div class="input-item">
+                <label>Full Name</label>
+                <input type="text" id="corp-input-name" placeholder="Full Name">
+            </div>
+            <div class="input-item" style="margin-top: 10px;">
+                <label>Professional Title</label>
+                <input type="text" id="corp-input-role" placeholder="Professional Title">
+            </div>
+            <div class="input-item" style="margin-top: 10px;">
+                <label>Profile Photo</label>
+                <!-- File input for picking image directly from device -->
+                <input type="file" id="corp-input-photo" accept="image/*" style="padding: 4px;">
+            </div>
+        </div>
+
+        <!-- Dynamic Content Sections (Contact, Education, Skills, etc.) -->
+        <div id="corporate-dynamic-editor-sections">
+            <p class="loading-text">Initializing layout fields...</p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE: Live A4 Preview Paper -->
+    <div class="corporate-preview-panel">
+        <div class="page-scale-container">
+            <div class="a4-page" id="corporate-paper">
+                
+                <!-- Top Accent Strip -->
+                <div class="top-accent-bar"></div>
+
+                <!-- Content Grid -->
+                <div class="template-grid">
+                    
+                    <!-- Left Column -->
+                    <aside class="left-column">
+                        <!-- Profile Image Wrapper -->
+                        <div class="avatar-container" id="avatarWrap">
+                            <img id="avatar-img" src="" alt="Profile Image">
+                            <div class="avatar-hover-overlay">Change Image 📷</div>
+                        </div>
+
+                        <!-- Left Dynamic Sections Target -->
+                        <div id="corp-left-sidebar"></div>
+                    </aside>
+
+                    <!-- Dividing Line -->
+                    <div class="vertical-divider"></div>
+
+                    <!-- Right Main Column -->
+                    <main class="right-column">
+                        <!-- Name & Header Block -->
+                        <div class="header-text-block">
+                            <h1 id="p-corp-name"></h1>
+                            <div id="p-corp-role"></div>
+                        </div>
+
+                        <!-- Right Dynamic Sections Target -->
+                        <div id="corp-right-main"></div>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
