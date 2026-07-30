@@ -1,0 +1,98 @@
+<div class="cv-emerald-container">
+
+    <!-- Mobile Tabs (sirf mobile pe dikhega) -->
+    <div class="tmpl-mobile-tabs-container" id="em-mobile-tabs">
+        <button type="button" class="tmpl-tab-btn active" id="em-tab-editor" onclick="emSwitchMobileTab('editor')">✏️ Editor</button>
+        <button type="button" class="tmpl-tab-btn" id="em-tab-preview" onclick="emSwitchMobileTab('preview')">👁️ Preview</button>
+    </div>
+
+    <!-- Left Editor Panel -->
+    <div class="emerald-editor" id="em-editor-panel">
+        <h2 style="margin-top:0; color:#064e3b;">Resume Details</h2>
+        <form id="emerald-form" onsubmit="event.preventDefault();">
+
+            <!-- Photo Upload -->
+            <div class="form-group" style="margin-bottom:16px; text-align:center;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:6px; color:#475569; text-transform:uppercase;">Profile Photo</label>
+                <div id="emerald-photo-preview" style="width:90px; height:90px; border-radius:50%; overflow:hidden; margin:0 auto 8px; background:#e2e8f0; border:3px solid #059669; display:flex; align-items:center; justify-content:center;">
+                    <span style="font-size:11px; color:#94a3b8;">No Photo</span>
+                </div>
+                <input type="file" id="emerald-photo" accept="image/*" style="font-size:12px; width:100%;">
+            </div>
+
+            <div class="form-group" style="margin-bottom:12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Full Name</label>
+                <input type="text" id="emerald-name" value="Richard Sanchez" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Job Title</label>
+                <input type="text" id="emerald-title" value="Graphic Designer" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Short Bio / Summary</label>
+                <textarea id="emerald-summary" rows="3" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box; font-family:inherit; font-size:13px;">I'm a creative Graphic Designer with expertise in branding, digital design, and visual communication, passionate about delivering innovative solutions.</textarea>
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Phone</label>
+                <input type="text" id="emerald-phone" value="+123-456-7890" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Email</label>
+                <input type="email" id="emerald-email" value="hello@reallygreatsite.com" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Website</label>
+                <input type="text" id="emerald-website" value="www.reallygreatsite.com" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <label style="display:block; font-size:12px; font-weight:700; margin-bottom:4px; color:#475569; text-transform:uppercase;">Address</label>
+                <input type="text" id="emerald-address" value="123 Anywhere St., Any City" style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+            </div>
+
+            <div id="emerald-dynamic-sections"></div>
+        </form>
+    </div>
+
+    <!-- Right Preview Panel -->
+    <div class="emerald-preview" id="em-preview-panel">
+        <div class="cv-emerald-content">
+
+            <!-- LEFT SIDEBAR -->
+            <aside class="em-sidebar">
+                <div class="em-photo-wrap">
+                    <div class="em-photo-circle" id="p-em-photo">
+                        <span class="em-photo-placeholder">Photo</span>
+                    </div>
+                </div>
+
+                <div class="em-side-block">
+                    <div class="em-pill">Contact</div>
+                    <div class="em-contact-list">
+                        <div class="em-contact-item"><span class="em-icon">📞</span> <span id="p-em-phone">+123-456-7890</span></div>
+                        <div class="em-contact-item"><span class="em-icon">✉️</span> <span id="p-em-email">hello@reallygreatsite.com</span></div>
+                        <div class="em-contact-item"><span class="em-icon">🌐</span> <span id="p-em-website">www.reallygreatsite.com</span></div>
+                        <div class="em-contact-item"><span class="em-icon">📍</span> <span id="p-em-address">123 Anywhere St., Any City</span></div>
+                    </div>
+                </div>
+
+                <div class="em-side-block" id="em-education-preview"></div>
+                <div class="em-side-block" id="em-award-preview"></div>
+            </aside>
+
+            <!-- RIGHT MAIN CONTENT -->
+            <main class="em-main">
+                <header class="em-header">
+                    <h1 id="p-em-name">Richard Sanchez</h1>
+                    <p class="em-title" id="p-em-title">Graphic Designer</p>
+                    <p class="em-bio" id="p-em-summary">I'm a creative Graphic Designer with expertise in branding, digital design, and visual communication, passionate about delivering innovative solutions.</p>
+                </header>
+
+                <div class="em-body">
+                    <section class="em-section" id="em-experience-preview"></section>
+                    <section class="em-section" id="em-skills-preview"></section>
+                </div>
+            </main>
+
+        </div>
+    </div>
+</div>
