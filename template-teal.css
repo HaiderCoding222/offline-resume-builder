@@ -1,0 +1,308 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Single Page A4 Print Area Sheet */
+.cv-teal-content {
+    width: 210mm;
+    height: 297mm;
+    max-height: 297mm;
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+    color: #333333;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;
+    page-break-inside: avoid !important;
+}
+
+/* Top Right Ribbon Triangle Fix */
+.top-right-triangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 60mm 60mm 0;
+    border-color: transparent #3d6079 transparent transparent;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Main Table Layout */
+.cv-main-table {
+    width: 100%;
+    height: 297mm;
+    border-collapse: collapse;
+    table-layout: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Sidebar Column */
+.teal-sidebar {
+    width: 78mm;
+    height: 297mm;
+    vertical-align: top;
+    background-color: #3d6079;
+    color: #ffffff;
+    padding: 10mm 5mm 8mm 5mm;
+}
+
+.photo-container {
+    text-align: center;
+    position: relative;
+    margin-bottom: 5mm;
+}
+
+.photo-frame {
+    width: 48mm;
+    height: 60mm;
+    margin: 0 auto;
+    border-radius: 50% / 45%;
+    border: 3.5pt solid #ffffff;
+    outline: 2pt solid #3d6079;
+    overflow: hidden;
+    background: #e0e0e0;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-bracket-lines {
+    width: 52mm;
+    margin: 3mm auto 0 auto;
+    border-bottom: 1.5pt solid rgba(255, 255, 255, 0.4);
+    position: relative;
+    height: 4mm;
+}
+
+.photo-bracket-lines::before,
+.photo-bracket-lines::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4mm;
+    width: 1.5pt;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.photo-bracket-lines::before { left: 0; }
+.photo-bracket-lines::after { right: 0; }
+
+/* Slanted Badges (CSS Clip-Path) */
+.badge-box {
+    margin-top: 4mm;
+    margin-bottom: 3mm;
+}
+
+.badge-bg-white {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #3d6079 !important;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 18px;
+    font-size: 10pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+}
+
+.badge-bg-teal {
+    display: inline-block;
+    background-color: #3d6079;
+    color: #ffffff !important;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 18px;
+    font-size: 10pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+}
+
+.job-badge-box {
+    margin-top: 2mm;
+}
+
+.job-badge-box .badge-bg-teal {
+    height: 20px;
+    line-height: 20px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    padding-right: 16px;
+}
+
+/* Contact Details */
+.contact-list {
+    margin-left: 2mm;
+    margin-bottom: 4mm;
+}
+
+.contact-item {
+    margin-bottom: 3mm;
+    font-size: 8pt;
+    line-height: 1.35;
+    color: #ffffff;
+    word-break: break-word;
+}
+
+/* Skills Section */
+.skills-list {
+    margin-left: 2mm;
+}
+
+.skill-item {
+    margin-bottom: 2.5mm;
+}
+
+.skill-label {
+    display: inline-block;
+    font-size: 8pt;
+    color: #ffffff;
+    width: 25mm;
+    vertical-align: middle;
+}
+
+.skill-bar-bg {
+    display: inline-block;
+    width: 36mm;
+    height: 2.2mm;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 1mm;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* Right Main Column */
+.teal-main-content {
+    vertical-align: top;
+    padding: 12mm 8mm 8mm 8mm;
+    position: relative;
+    z-index: 3;
+}
+
+.name-header h1 {
+    font-size: 26pt;
+    font-weight: 800;
+    color: #2c495d;
+    margin: 0;
+    line-height: 0.95;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 4;
+}
+
+.about-text {
+    font-size: 8pt;
+    line-height: 1.35;
+    color: #333333;
+    margin-bottom: 3.5mm;
+    padding-right: 3mm;
+}
+
+/* Education Layout Grid */
+.education-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3.5mm;
+}
+
+.edu-item {
+    width: 50%;
+    vertical-align: top;
+    border-left: 1.5pt solid #3d6079;
+    padding-left: 2.5mm;
+    padding-right: 2mm;
+}
+
+.edu-date {
+    font-size: 7.5pt;
+    font-weight: bold;
+    color: #333333;
+}
+
+.edu-school {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #2c495d;
+}
+
+.edu-degree {
+    font-size: 7.5pt;
+    color: #555555;
+}
+
+/* Timeline Work Experience */
+.timeline-block {
+    position: relative;
+    padding-left: 3.5mm;
+    margin-left: 1mm;
+    border-left: 1pt solid #3d6079;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3mm;
+    padding-left: 2mm;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -5.1mm;
+    top: 1mm;
+    width: 2.6mm;
+    height: 2.6mm;
+    border-radius: 50%;
+    background-color: #3d6079;
+}
+
+.timeline-title {
+    font-size: 8.5pt;
+    font-weight: bold;
+    color: #2c495d;
+}
+
+.timeline-company {
+    font-size: 8pt;
+    font-weight: 600;
+    color: #333333;
+}
+
+.timeline-date {
+    font-size: 7.5pt;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 0.8mm;
+}
+
+.timeline-bullets {
+    padding-left: 3mm;
+    font-size: 7.5pt;
+    color: #444444;
+    line-height: 1.3;
+}
+
+.timeline-bullets li {
+    margin-bottom: 0.5mm;
+}

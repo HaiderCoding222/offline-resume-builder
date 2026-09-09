@@ -1,0 +1,126 @@
+<div class="cv-teal-container" style="display:flex; gap:20px; width:100%; height:calc(100vh - 75px); background:#f1f5f9; overflow:hidden;">
+
+    <!-- Mobile Tabs (sirf mobile pe dikhega) -->
+    <div class="tmpl-mobile-tabs-container" id="teal-mobile-tabs">
+        <button type="button" class="tmpl-tab-btn active" id="teal-tab-editor" onclick="tealSwitchMobileTab('editor')">✏️ Editor</button>
+        <button type="button" class="tmpl-tab-btn" id="teal-tab-preview" onclick="tealSwitchMobileTab('preview')">👁️ Preview</button>
+    </div>
+
+    <!-- LEFT EDITOR PANEL -->
+    <div class="teal-editor" id="teal-editor-panel" style="width:420px; min-width:380px; max-width:450px; height:100%; background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:20px; overflow-y:auto; box-sizing:border-box; flex-shrink:0; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        
+        <h2 style="margin-top:0; color:#2c495d; font-size:18px; border-bottom:2px solid #e2e8f0; padding-bottom:10px;">✏️ Resume Details</h2>
+        
+        <form id="teal-form" onsubmit="event.preventDefault();">
+
+            <!-- Personal Info -->
+            <div style="background:#f8fafc; padding:14px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:14px;">
+                <h3 style="font-size:12px; text-transform:uppercase; color:#475569; margin-top:0; margin-bottom:12px;">Personal Info</h3>
+
+                <!-- Photo Upload -->
+                <div style="margin-bottom:12px; text-align:center;">
+                    <label style="display:block; font-size:11px; font-weight:700; margin-bottom:6px; color:#475569; text-transform:uppercase;">Profile Photo</label>
+                    <div id="teal-photo-preview" style="width:100px; height:130px; border-radius:50% / 38%; overflow:hidden; margin:0 auto 10px; background:#e2e8f0; border:3px solid #3d6079; display:flex; align-items:center; justify-content:center;">
+                        <span style="font-size:10px; color:#94a3b8;">No Photo</span>
+                    </div>
+                    <input type="file" id="teal-input-file" accept="image/*" style="font-size:11px; width:100%;">
+                </div>
+
+                <div style="margin-bottom:8px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:#64748b; margin-bottom:3px;">Full Name</label>
+                    <input type="text" id="teal-input-name" value="Henrietta Mitchell" style="width:100%; padding:8px; font-size:13px; border:1.5px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom:8px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:#64748b; margin-bottom:3px;">Job Title</label>
+                    <input type="text" id="teal-input-title" value="GRAPHIC DESIGNER" style="width:100%; padding:8px; font-size:13px; border:1.5px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom:8px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:#64748b; margin-bottom:3px;">Phone</label>
+                    <input type="text" id="teal-input-phone" value="+123-456-7890" style="width:100%; padding:8px; font-size:13px; border:1.5px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom:8px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:#64748b; margin-bottom:3px;">Email</label>
+                    <input type="email" id="teal-input-email" value="hello@reallygreatsite.com" style="width:100%; padding:8px; font-size:13px; border:1.5px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom:8px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:#64748b; margin-bottom:3px;">Website</label>
+                    <input type="text" id="teal-input-website" value="www.reallygreatsite.com" style="width:100%; padding:8px; font-size:13px; border:1.5px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom:8px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:#64748b; margin-bottom:3px;">Address</label>
+                    <input type="text" id="teal-input-address" value="123 Anywhere St., Any City, ST 12345" style="width:100%; padding:8px; font-size:13px; border:1.5px solid #cbd5e1; border-radius:6px; box-sizing:border-box;">
+                </div>
+            </div>
+
+            <!-- Dynamic Sections -->
+            <div id="teal-dynamic-editor-sections"></div>
+
+        </form>
+    </div>
+
+    <!-- RIGHT PREVIEW PANEL -->
+    <div class="teal-preview" id="teal-preview-panel" style="flex:1; height:100%; background:#94a3b8; border:1px solid #cbd5e1; border-radius:10px; padding:24px; overflow-y:auto; display:flex; justify-content:center; align-items:flex-start; box-sizing:border-box;">
+
+        <!-- ===== TEAL CV CONTENT ===== -->
+        <div id="cv-teal-print-area" class="cv-teal-content" style="width:794px; min-width:794px; max-width:794px; height:1123px; min-height:1123px; max-height:1123px; background:#ffffff; box-shadow:0 10px 30px rgba(0,0,0,0.15); border-radius:8px; overflow:hidden; position:relative; flex-shrink:0;">
+
+            <!-- Top Right Ribbon Triangle -->
+            <div class="top-right-triangle" style="position:absolute; top:0; right:0; width:0; height:0; border-style:solid; border-width:0 60mm 60mm 0; border-color:transparent #3d6079 transparent transparent; z-index:1; pointer-events:none;"></div>
+
+            <table class="cv-main-table" style="width:100%; height:100%; border-collapse:collapse; table-layout:fixed; position:relative; z-index:2;">
+                <tr>
+                    <!-- LEFT SIDEBAR -->
+                    <td class="teal-sidebar" style="width:78mm; height:100%; vertical-align:top; background-color:#3d6079; color:#ffffff; padding:10mm 5mm 8mm 5mm;">
+
+                        <div style="text-align:center; margin-bottom:5mm;">
+                            <div id="teal-photo-wrapper" style="width:48mm; height:60mm; margin:0 auto; border-radius:50% / 45%; border:3.5pt solid #ffffff; outline:2pt solid #3d6079; overflow:hidden; background:#e0e0e0; display:flex; align-items:center; justify-content:center;">
+                                <img id="teal-p-img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300" alt="Profile" style="width:100%; height:100%; object-fit:cover;">
+                                <span id="teal-p-placeholder" style="display:none; font-size:12px; color:#94a3b8;">No Photo</span>
+                            </div>
+                            <div style="width:52mm; margin:3mm auto 0 auto; border-bottom:1.5pt solid rgba(255,255,255,0.4); position:relative; height:4mm;">
+                                <div style="position:absolute; bottom:0; left:0; height:4mm; width:1.5pt; background-color:rgba(255,255,255,0.4);"></div>
+                                <div style="position:absolute; bottom:0; right:0; height:4mm; width:1.5pt; background-color:rgba(255,255,255,0.4);"></div>
+                            </div>
+                        </div>
+
+                        <!-- CONTACT -->
+                        <div style="margin-top:4mm; margin-bottom:3mm;">
+                            <span style="display:inline-block; background-color:#ffffff; color:#3d6079; height:22px; line-height:22px; padding-left:10px; padding-right:18px; font-size:10pt; font-weight:bold; letter-spacing:1px; text-transform:uppercase; clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);">CONTACT</span>
+                        </div>
+
+                        <div id="teal-contact-target" style="margin-left:2mm; margin-bottom:4mm;">
+                            <p style="margin-bottom:3mm; font-size:8pt; line-height:1.35; color:#ffffff; word-break:break-word;"><span style="font-weight:bold;" id="teal-p-phone">+123-456-7890</span></p>
+                            <p style="margin-bottom:3mm; font-size:8pt; line-height:1.35; color:#ffffff; word-break:break-word;" id="teal-p-email">hello@reallygreatsite.com</p>
+                            <p style="margin-bottom:3mm; font-size:8pt; line-height:1.35; color:#ffffff; word-break:break-word;" id="teal-p-website">www.reallygreatsite.com</p>
+                            <p style="margin-bottom:3mm; font-size:8pt; line-height:1.35; color:#ffffff; word-break:break-word;" id="teal-p-address">123 Anywhere St., Any City, ST 12345</p>
+                        </div>
+
+                        <!-- SKILLS (Dynamic Target) -->
+                        <div id="teal-sidebar-sections-container"></div>
+
+                    </td>
+
+                    <!-- RIGHT MAIN CONTENT -->
+                    <td class="teal-main-content" style="vertical-align:top; padding:12mm 8mm 8mm 8mm; position:relative; z-index:3;">
+
+                        <!-- Name Header -->
+                        <div style="margin-bottom:6mm;">
+                            <h1 id="teal-p-name" style="font-size:26pt; font-weight:800; color:#2c495d; margin:0; line-height:0.95; letter-spacing:1pt; text-transform:uppercase;">HENRIETTA MITCHELL</h1>
+                            
+                            <!-- Job Pill with Diagonal -->
+                            <div class="teal-job-pill-wrapper" style="display:flex; align-items:center; margin-top:12px; margin-bottom:30px;">
+                                <div id="teal-p-title" style="background:#3d5c78; color:white; padding:8px 20px; font-size:14px; font-weight:600; display:inline-block; border-right:18px solid transparent;">GRAPHIC DESIGNER</div>
+                                <div style="width:0; height:0; border-top:19px solid transparent; border-bottom:19px solid transparent; border-left:18px solid #3d5c78; flex-shrink:0; margin-left:-1px;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Main Sections -->
+                        <div id="teal-main-sections-container"></div>
+
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,120 @@
+/* ================== BLUE TEMPLATE LAYOUT BLUEPRINT ================== */
+
+/* Is container ko full layout standard height par fit kiya gaya hai */
+.cv-blue-container {
+    display: flex;
+    gap: 0px; /* Seamless look */
+    width: 100%;
+    height: calc(100vh - 75px); /* Header minus karke workspace height */
+    background: #f1f5f9;
+    overflow: hidden; /* Main window scroll block karega */
+}
+
+/* --- Left Editor Side --- */
+.blue-editor {
+    width: 420px;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-right: 1px solid #cbd5e1;
+    overflow-y: auto; /* Independent scrollbar */
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Right Preview Side --- */
+.blue-preview {
+    flex: 1;
+    padding: 30px;
+    background: #e2e8f0;
+    overflow-y: auto; /* Independent preview scrollbar */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+/* Custom Scrollbars to match style.css premium standard[cite: 3] */
+.blue-editor::-webkit-scrollbar,
+.blue-preview::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.blue-editor::-webkit-scrollbar-track,
+.blue-preview::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.blue-editor::-webkit-scrollbar-thumb,
+.blue-preview::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.blue-editor::-webkit-scrollbar-thumb:hover,
+.blue-preview::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* --- Fixed A4 Page Size Blueprint --- */
+.cv-blue-content {
+    width: 794px !important;              /* Standard A4 Width */
+    min-height: 1123px !important;         /* Standard A4 Height (297mm)[cite: 3, 8] */
+    max-height: 1123px !important;         /* Strict Height Lock */
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Structural containment */
+    box-sizing: border-box;
+}
+
+/* --- Header & Layout Bodies --- */
+.cv-blue-header {
+    background: #1e3a8a;
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv-blue-header h1 {
+    font-size: 28px;
+    margin: 0 0 4px 0;
+}
+
+.cv-blue-body {
+    display: flex;
+    flex: 1; /* Automatically consumes remaining space */
+}
+
+.main-content { 
+    flex: 2; 
+    padding: 35px 40px; 
+}
+
+.sidebar { 
+    flex: 1; 
+    background: #f8fafc; 
+    padding: 35px 25px; 
+    border-left: 1px solid #e2e8f0; 
+}
+
+h2 {
+    font-size: 15px;
+    color: #1e3a8a;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 6px;
+    margin: 20px 0 12px 0;
+    text-transform: uppercase;
+}
+
+.skills-list div {
+    background: white;
+    padding: 6px 12px;
+    margin: 6px 0;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}

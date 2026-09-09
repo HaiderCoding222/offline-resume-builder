@@ -1,0 +1,58 @@
+const AVAILABLE_TEMPLATES = [
+    {
+        id: "default",
+        name: "Classic Minimalist",
+        htmlFile: "template-default.html",
+        cssFile: "template-default.css",
+        scriptFile: "template-default.js",
+        thumbnail: "temp-img-1.png"     
+    },
+    {
+        id: "modern",
+        name: "Modern Elegant",
+        htmlFile: "template-modern.html",
+        cssFile: "template-modern.css",
+        scriptFile: "template-modern.js",
+        thumbnail: "temp-img-modern.png" 
+    },
+    {
+        id: "elegant",
+        name: "Elegant Minimalist",
+        htmlFile: "template-elegant.html",
+        cssFile: "template-elegant.css",
+        scriptFile: "template-elegant.js",
+        thumbnail: "temp-eleg-img.png"
+    },
+     {
+        id: "blue",
+        name: "Blue Professional",
+        htmlFile: "template-blue.html",
+        cssFile: "template-blue.css",
+        scriptFile: "template-blue.js",
+        thumbnail: "template-blue.png"   
+    },
+    {
+    id: "teal",
+    name: "Teal Executive",
+    htmlFile: "template-teal.html",
+    cssFile: "template-teal.css",
+    scriptFile: "template-teal.js",
+    thumbnail: "template-teal.png"
+    },
+    {
+        id: "corporate-clean",
+        name: "Corporate Clean",
+        htmlFile: "template-corporate-clean.html",
+        cssFile: "template-corporate-clean.css",
+        scriptFile: "template-corporate-clean.js",
+        thumbnail: "template-corporate-clean.png"
+    },
+    {
+    id: "emerald",
+    name: "Emerald Creative",
+    htmlFile: "template-emerald.html",
+    cssFile: "template-emerald.css",
+    scriptFile: "template-emerald.js",
+    thumbnail: "template-emerald.png"
+    }
+];

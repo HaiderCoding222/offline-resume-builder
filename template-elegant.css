@@ -1,0 +1,145 @@
+/* Elegant Template Canvas Grid Standard System Blueprint */
+.elegant-theme {
+    width: 794px;
+    min-height: 1123px;
+    background: #ffffff;
+    color: #1e293b;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.elegant-header {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    padding: 35px 40px 25px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 4px solid #0ea5e9;
+}
+
+.elegant-photo-container {
+    flex-shrink: 0;
+}
+
+.elegant-avatar {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.elegant-name-block h1 {
+    font-size: 34px;
+    margin: 0 0 4px 0;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.elegant-profession {
+    font-size: 17px;
+    color: #475569;
+    margin: 0;
+    font-weight: 500;
+}
+
+.elegant-body {
+    display: flex;
+    padding: 30px 40px;
+    gap: 35px;
+    background: #ffffff;
+}
+
+.elegant-left-column {
+    width: 38%;
+}
+
+.elegant-right-column {
+    width: 62%;
+}
+
+.elegant-section {
+    margin-bottom: 22px;
+}
+
+.elegant-section-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #bae6fd;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.elegant-text {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #334155;
+    word-break: break-word;
+    margin: 0;
+}
+
+.elegant-contact-info .contact-item {
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #475569;
+}
+
+.elegant-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.elegant-skills-list div {
+    font-size: 12px;
+    padding-left: 2px;
+    color: #334155;
+}
+
+.elegant-skills-list div:before {
+    content: "•";
+    color: #0ea5e9;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Node Block Structure styling */
+.cv-experience-node {
+    margin-bottom: 18px;
+}
+
+.cv-node-bold-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.cv-node-date-sub {
+    font-size: 11px;
+    color: #64748b;
+    margin: 1px 0 3px;
+}
+
+.cv-node-role-italic {
+    font-size: 12px;
+    color: #334155;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.cv-node-details-para {
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: #475569;
+    margin: 0;
+}
