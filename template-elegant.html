@@ -1,0 +1,81 @@
+<div class="cv-elegant-workspace-container">
+
+    <!-- Mobile Tabs -->
+    <div class="tmpl-mobile-tabs-container" id="el-mobile-tabs">
+        <button type="button" class="tmpl-tab-btn active" id="el-tab-editor" onclick="elSwitchMobileTab('editor')">✏️ Editor</button>
+        <button type="button" class="tmpl-tab-btn" id="el-tab-preview" onclick="elSwitchMobileTab('preview')">👁️ Preview</button>
+    </div>
+
+    <div class="cv-elegant-inner-flex">
+
+        <!-- ================= EDITOR PANEL ================= -->
+        <div id="el-editor-panel" class="elegant-editor-sidebar">
+            <h3 class="el-editor-title">Elegant Core Editor</h3>
+            <form id="elegant-editor-form" onsubmit="event.preventDefault();">
+
+                <!-- Personal Details -->
+                <div class="el-form-block">
+                    <h4 class="el-form-heading">Personal Details</h4>
+
+                    <div class="el-form-group">
+                        <label>PROFILE PHOTO</label>
+                        <input type="file" id="el-photo-upload" accept="image/*">
+                    </div>
+
+                    <div class="el-form-group">
+                        <label>FULL NAME</label>
+                        <input type="text" id="el-input-name">
+                    </div>
+
+                    <div class="el-form-group">
+                        <label>PROFESSION TITLE</label>
+                        <input type="text" id="el-input-title">
+                    </div>
+
+                    <div class="el-form-group">
+                        <label>ABOUT ME</label>
+                        <textarea id="el-input-summary" rows="3"></textarea>
+                    </div>
+
+                    <div class="el-form-group">
+                        <label>PHONE</label>
+                        <input type="text" id="el-input-phone">
+                    </div>
+
+                    <div class="el-form-group">
+                        <label>EMAIL</label>
+                        <input type="email" id="el-input-email">
+                    </div>
+
+                    <div class="el-form-group">
+                        <label>LINKEDIN PROFILE URL</label>
+                        <div class="el-input-row">
+                            <input type="text" id="el-input-linkedin">
+                            <button type="button" onclick="clearContactField('linkedin');">✕</button>
+                        </div>
+                    </div>
+
+                    <div class="el-form-group">
+                        <label>PERSONAL PORTFOLIO LINK</label>
+                        <div class="el-input-row">
+                            <input type="text" id="el-input-portfolio">
+                            <button type="button" onclick="clearContactField('portfolio');">✕</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Sections -->
+                <div id="elegant-dynamic-editor-fields"></div>
+
+            </form>
+        </div>
+
+        <!-- ================= PREVIEW PANEL ================= -->
+        <div id="el-preview-panel" class="elegant-preview-panel">
+            <div class="elegant-scale-wrapper" id="elegant-scale-wrapper">
+                <div id="elegant-print-node" class="elegant-theme"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
